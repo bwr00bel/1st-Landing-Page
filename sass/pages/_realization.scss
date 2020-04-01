@@ -1,0 +1,17 @@
+.section-sauna {
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $color-grey-light-1;
+    box-shadow: $box-shadow-light;
+}
+
+.section-bath {
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, $color-white, rgba($color-primary-dark, .3));
+    box-shadow: $box-shadow-light;
+}

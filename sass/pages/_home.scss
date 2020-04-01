@@ -1,0 +1,95 @@
+.section-about {
+    padding: 25rem 0;
+    border: 1px solid $color-grey-light-1;
+    box-shadow: $box-shadow-light;
+
+    @include respond(tab-port) {
+        padding: 15rem 5rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 15rem 1rem;
+    }
+}
+
+.section-features {
+    background-color: $color-primary-dark;
+    padding: 20rem 0;
+    color: $color-white;
+    overflow: hidden;
+    border: 1px solid $color-grey-light-1;
+    box-shadow: $box-shadow-light;
+
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
+
+}
+
+.section-service {
+    padding: 15rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $color-grey-light-1;
+    box-shadow: $box-shadow-light;
+
+    &:nth-child(1) {
+        align-self: flex-start;
+    }
+
+}
+
+.section-task {
+    padding: 15rem 0;
+    background-size: cover;
+    background-position: center;
+    box-shadow: $box-shadow-light;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, .5),
+            rgba($color-primary-dark, .8)),
+        url(/img/Main/sauna3.jpg);
+
+    @media only screen and (min-resolution:192dpi) and (min-width:37.5em),
+    only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+    only screen and (min-width:125em) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, .5),
+                rgba($color-primary-dark, .8)),
+            url(/img/Main/sauna3-large.jpg);
+    }
+
+
+    @include respond(tab-port) {
+        padding: 6rem 0;
+    }
+
+}
+
+.section-newsletter {
+    background-color: $color-primary-dark;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: $box-shadow-light;
+}
+
+.section-review {
+    padding: 15rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $box-shadow-light;
+    border: 1px solid $color-grey-light-1;
+
+}
+
+.section-book {
+    display: flex;
+    box-shadow: $box-shadow-light;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+}

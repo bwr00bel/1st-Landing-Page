@@ -1,0 +1,90 @@
+.features-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 4rem;
+
+    @include respond(phone) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    &__head {
+        font-size: 3rem;
+
+        @include respond(small-phone) {
+            font-size: 2.4rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__par {
+        width: 60%;
+        color: $color-white;
+
+        @include respond(phone) {
+            width: 80%;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 12rem;
+        top: 0;
+        box-shadow: $box-shadow-bright;
+
+        @include respond(phone) {
+            position: relative;
+            align-self: center;
+            right: 0;
+        }
+    }
+}
+
+.features-gallery {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+
+
+    &__photo {
+        box-shadow: $box-shadow-bright;
+        width: 40%;
+        border-radius: 2px;
+        transition: all .2s;
+        outline-offset: 2rem;
+        margin: 2rem;
+
+        @include respond(phone) {
+            width: 80%;
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            align-self: flex-end;
+
+
+            @include respond(phone) {
+                position: relative;
+            }
+
+        }
+
+        &:hover {
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 1.5rem 3rem rgba($color-white, .4);
+            z-index: 20;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+
+}

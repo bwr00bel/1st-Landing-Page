@@ -1,0 +1,31 @@
+//Two elements on the section
+.row {
+    display: flex;
+
+    @include respond(phone) {
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+.col-1-of-2 {
+
+    width: 100%;
+
+    &:first-child {
+        transform: translateY(5rem);
+        background-color: $color-grey-light-1;
+        width: 90%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            transform: translate(0);
+        }
+    }
+
+
+}

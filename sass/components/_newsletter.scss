@@ -1,0 +1,61 @@
+.newsbox {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+        flex-direction: column;
+        padding: 5rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 3rem;
+    }
+
+    &__heading {
+
+        p {
+            color: $color-white;
+            width: 60%;
+
+
+            @include respond(phone) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: space-around;
+
+
+    }
+
+
+    &__input {
+        @include input-msg;
+
+        @include respond(phone) {
+            margin-right: 3rem;
+        }
+
+        @include respond(small-phone) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__input:placeholder-shown+&__label {
+        @include input-plh;
+    }
+
+    &__label {
+        @include label-msg;
+    }
+
+    &__button {
+        box-shadow: $box-shadow-bright;
+
+
+    }
+}

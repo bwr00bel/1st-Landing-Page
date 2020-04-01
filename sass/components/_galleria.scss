@@ -1,0 +1,22 @@
+.galleria {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 80vh;
+    background: rgba($color-black, .7);
+
+}
+
+
+.description-text {
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        width: 60%;
+        margin: 2rem;
+    }
+}

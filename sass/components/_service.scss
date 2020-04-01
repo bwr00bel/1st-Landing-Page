@@ -1,0 +1,63 @@
+.overview {
+    align-self: flex-start;
+    padding-left: 4rem;
+
+    @include respond(tab-port) {
+        align-self: center;
+        padding: 0;
+    }
+}
+
+.box-service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+        border: 1px solid $color-primary-light;
+        padding: 4rem;
+        margin: 4rem;
+        transition: all .3s;
+
+
+        @include respond(tab-port) {
+            width: 60%;
+            padding: 6rem;
+            margin: 5rem;
+        }
+
+        @include respond(phone) {
+            width: 80%;
+            padding: 3rem;
+
+        }
+
+        @include respond(small-phone) {
+            width: 90%;
+            padding: 2rem 1rem;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            border: none;
+            box-shadow: $box-shadow-light;
+        }
+    }
+
+    &__icon {
+        @include icon;
+
+    }
+
+    span {
+        font-size: 4rem;
+        color: $color-primary-dark;
+
+
+    }
+}

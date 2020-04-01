@@ -1,0 +1,154 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.7;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+
+
+    &--main {
+
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        letter-spacing: 1.3rem;
+        animation: moveInLeft 1s ease-out;
+
+        @include respond(medium-port) {
+            letter-spacing: 1rem;
+            font-size: 3rem;
+        }
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 2rem;
+        }
+
+        @include respond(small-phone) {
+            letter-spacing: .25rem;
+            font-size: 2rem;
+        }
+
+    }
+
+    &--sub {
+        font-size: 2rem;
+        font-weight: 200;
+        letter-spacing: 1.74rem;
+        animation: moveInRight 1s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .3rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.heading-logo {
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    cursor: pointer;
+
+
+    &--main {
+        letter-spacing: 3px;
+        font-size: 2rem;
+        font-weight: 400;
+
+
+        @include respond(phone) {
+            letter-spacing: .1rem;
+
+        }
+    }
+
+    &--sub {
+        letter-spacing: 5px;
+        font-weight: 300;
+        font-size: 1.2rem;
+
+        @include respond(phone) {
+            letter-spacing: .3rem;
+
+        }
+    }
+}
+
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: $color-primary;
+    letter-spacing: .2rem;
+
+    animation: moveInLeft 1s ease-out;
+
+    @include respond(tab-port) {
+        letter-spacing: .15rem;
+        font-size: 2.5rem;
+    }
+
+
+    &--main {
+        font-size: 3rem;
+        font-weight: 400;
+
+        @include respond(tab-port) {
+            font-size: 2.1rem;
+        }
+
+    }
+
+    &--sub {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+
+
+    }
+}
+
+.paragraph {
+    color: $color-primary-dark;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    @include respond(tab-port) {
+        font-size: 1.1rem;
+    }
+
+}
+
+.heading-teritary {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $color-primary;
+    letter-spacing: .2rem;
+
+
+    @include respond(tab-port) {
+        font-size: 1.5rem;
+    }
+
+    &--white {
+        color: $color-white;
+    }
+}

@@ -1,0 +1,173 @@
+@mixin horizontal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Icons functionality
+
+@mixin icon {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-primary;
+}
+
+@mixin icon-small {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: $color-primary;
+}
+
+//Input + label --> form decorative
+
+@mixin input-msg {
+    border-style: none;
+    font-size: 1.5rem;
+    color: $color-white;
+    border-bottom: .5px solid $color-white;
+    background-color: transparent;
+    transition: all .3s;
+    margin-right: 5rem;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 .2rem 1rem rgba($color-white, .4);
+        border-bottom: 2px solid $color-secondary-light;
+    }
+
+    &:focus:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-grey-dark-2;
+    }
+}
+
+@mixin input-plh {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+
+}
+
+@mixin label-msg {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $color-white;
+    align-self: flex-end;
+    transition: all .3s;
+    font-family: inherit;
+    margin-top: 1.8rem;
+    letter-spacing: 1px;
+
+}
+
+
+//Underline btn manager
+
+@mixin line-btn {
+    letter-spacing: 2px;
+    color: $color-white;
+    text-decoration: none;
+    margin: 2rem;
+    display: inline-block;
+    background: linear-gradient(to bottom,
+            $color-primary-light 0%,
+            $color-primary-light 100%);
+
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 2px 1px;
+    transition: background-size .2s;
+
+
+
+    &:hover {
+        box-shadow: $box-shadow-bright;
+        background-size: .4rem 3rem;
+    }
+
+}
+
+
+//MEDIA QUERIES MANAGER
+/*0- 600px: - phone
+ 600- 900px: - tablet portrait
+ 900- 1200px: - Tablet landscape
+1200-1800 is where our normal styles apply
+ 1800px + - Big destop
+ */
+
+
+/*$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+ */
+
+// ORDER: Base+ typography> general layout +grid >page layout > components
+//1em = 16px
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint==small-phone {
+        @media only screen and (max-width:22.5em) {
+            //360px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==phone {
+        @media only screen and (max-width:37.5em) {
+            //600px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==medium-port {
+        @media only screen and (max-width:47.5em) {
+            //750px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width:56.25em) {
+            //900px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-land {
+        @media only screen and (max-width:75em) {
+            //1200px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width:112.5em) {
+            //1800px
+            @content
+        }
+
+        ;
+    }
+
+
+
+}
