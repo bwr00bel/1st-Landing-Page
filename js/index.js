@@ -104,6 +104,6 @@ $(".footer-box__logo").on("click", function () {
 
 
 (function () {
-    Galleria.loadTheme('/galleria-1.6.1/dist/themes/classic/galleria.classic.min.js');
+    Galleria.loadTheme('galleria-1.6.1/dist/themes/classic/galleria.classic.min.js');
     Galleria.run('.galleria');
 }());
