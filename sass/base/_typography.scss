@@ -25,13 +25,13 @@ body {
         }
 
         @include respond(phone) {
-            letter-spacing: .5rem;
+            letter-spacing: .25rem;
             font-size: 2rem;
         }
 
         @include respond(small-phone) {
-            letter-spacing: .25rem;
-            font-size: 2rem;
+
+            font-size: 1.8rem;
         }
 
     }
