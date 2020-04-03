@@ -2,37 +2,20 @@
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, .5),
             rgba($color-primary-dark, .8)),
-        url(img/Main/sauna0.jpg);
+        url(img/Main/sauna0_large.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 2rem 2rem 0 0;
     box-shadow: $box-shadow-light;
 
 
-    @media only screen and (min-resolution:192dpi) and (min-width:37.5em),
-    only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-    only screen and (min-width:125em) {
-        background-image: linear-gradient(to right bottom,
-                rgba($color-primary-light, .5),
-                rgba($color-primary-dark, .8)),
-            url(img/Main/sauna0_large.jpg);
-    }
-
-
     &__bcg {
         background-image: linear-gradient(to right bottom,
                 rgba($color-primary-light, .5),
                 rgba($color-primary-dark, .8)),
-            url(img/Main/sauna2.jpg);
+            url(img/Main/sauna2-large.jpg);
 
-        @media only screen and (min-resolution:192dpi) and (min-width:37.5em),
-        only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-        only screen and (min-width:125em) {
-            background-image: linear-gradient(to right bottom,
-                    rgba($color-primary-light, .5),
-                    rgba($color-primary-dark, .8)),
-                url(img/Main/sauna2_large.jpg);
-        }
+
 
     }
 

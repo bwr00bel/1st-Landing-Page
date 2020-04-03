@@ -31,22 +31,22 @@
         text-decoration: none;
         justify-content: space-around;
 
-        @include respond(small-phone) {
+        @include respond(phone) {
             flex-wrap: wrap;
 
         }
     }
 
     &__item {
-        font-size: 1.11rem;
+        font-size: 1.1rem;
         list-style: none;
     }
 
     &__link {
         @include line-btn;
 
-        @include respond(small-phone) {
-            margin: 1.3rem;
+        @include respond(phone) {
+            margin: 1rem;
 
         }
     }
